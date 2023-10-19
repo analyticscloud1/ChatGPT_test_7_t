@@ -5,10 +5,10 @@ var ajaxCall = (query, language) => {
     $.ajax({
       url: "https://martin-inviting-wolf.ngrok-free.app",
       type: "POST",
-      data: JSON.stringify({
-        query: query,
-        language: language
-      }),
+      data: {
+        "query": query,
+        "language": language
+      },
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin":"*"
